@@ -2,7 +2,7 @@ Rock Paper Scissors
 
 Un classique de "Pierre-Papier-Ciseaux" implémenté en python.
 
-!()
+!(rock-paper-scissors/image.jpeg)
 
 Description
 Ce projet est une version numérique du célèbre jeu "Pierre-Papier-Ciseaux". Les joueurs peuvent choisir l'une des trois options et l'ordinateur choisit également de manière aléatoire. Le gagnant est décidé selon les règles classiques du jeu.
