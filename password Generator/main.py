@@ -1,12 +1,5 @@
-print("Welcome to the PyPassword Generator")
-
-letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L",
-           "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-
-symbols = ["~", "!", "@", "#", "$", "%", "^", "&", "*",
-           '(', ')', '_', '-', '+', '=', '{', '}', '[', ']', '|', ':', ';', '<', '>', '.', '?', '/']
-
-numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+import random
+import string
 
 
 def get_input(prompt):
@@ -18,14 +11,26 @@ def get_input(prompt):
             print("Please enter a valid number.")
 
 
-user_capital_l = get_input(
-    "How many capital letters would you like in your password: ")
-user_lowercase_l = get_input(
-    "How many lowercase letters would you like in your password: ")
+def generate_password(num_upper, num_lower, num_symbols, num_digits):
+    password_characters = (
+        [random.choice(string.ascii_uppercase) for _ in range(num_upper)] +
+        [random.choice(string.ascii_lowercase) for _ in range(num_lower)] +
+        [random.choice(string.punctuation) for _ in range(num_symbols)] +
+        [random.choice(string.digits) for _ in range(num_digits)]
+    )
 
-user_s = get_input("How many symbols would you like: ")
-user_n = get_input("How many numbers would you like: ")
+    random.shuffle(password_characters)
+    return ''.join(password_characters)
 
-password = user_capital_l + user_lowercase_l + user_s + user_n
 
-print(f"Here is your password: {password}")
+if __name__ == '__main__':
+    num_upper = get_input(
+        "How many capital letters would you like in your password: ")
+    num_lower = get_input(
+        "How many lowercase letters would you like in your password: ")
+    num_symbols = get_input(
+        "How many symbols would you like in your password: ")
+    num_digits = get_input("How many digits would you like in your password: ")
+
+    password = generate_password(num_upper, num_lower, num_symbols, num_digits)
+    print(f"Generated Password: {password}")
