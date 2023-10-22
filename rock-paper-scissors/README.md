@@ -2,7 +2,7 @@
 
 Un jeu simple et amusant de Rock, Paper, Scissors (Pierre, Papier, Ciseaux) joué contre l'ordinateur.
 
-![Rock, Paper, Scissors Image](path_to_image_if_you_have_one.jpg)
+![Rock, Paper, Scissors Image](https://github.com/MahamoudAH/pythonProjects/blob/master/rock-paper-scissors/image.jpeg?raw=true)
 
 ## Comment jouer
 
