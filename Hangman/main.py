@@ -1,33 +1,45 @@
-import random
 from hangman_art import logo, stages
 from hangman_words import word_list
 
-print(logo)
-guess = input("Guess a letter: ")
 
-word = random.choice(word_list)
-liste = []
-for i in range(1, len(stages)):
-    liste.append('_')
+def play_hangman():
+    import random
 
-i = len(stages) - 1
+    print(logo)
 
-liste = ' '.join(liste)
-print(liste)
+    word = random.choice(word_list)
+    display = ["_" for _ in word]
+    guessed_letters = []
 
-print(word)
+    lives = len(stages) - 1
 
-while i >= 1:
-    if guess in word:
-        index = word.index(guess)
-        print(liste)
-        print(stages[i])
-        guess = input("Guess a letter: ")
+    print(' '.join(display))
+    # print(word)
+
+    while lives > 0 and "_" in display:
+        guess = input("Guess a letter: ").lower()
+
+        if guess in guessed_letters:
+            print(f"You've already guessed {guess}")
+            continue
+        guessed_letters.append(guess)
+
+        if guess in word:
+            for index, letter in enumerate(word):
+                if letter == guess:
+                    display[index] = guess
+        else:
+            print(
+                f"You guessed {guess}, that's not in the word. You lose a life.")
+            lives -= 1
+
+        print(' '.join(display))
+        print(stages[lives])
+
+    if "_" not in display:
+        print("You win!")
     else:
-        print(f"You guessed {guess}, that's not in the word. You lose a life.")
-        print(liste)
-        print(stages[i])
-        guess = input("Guess a letter: ")
+        print("You lose.")
 
-    i -= 1
-    print(i)
+
+play_hangman()
