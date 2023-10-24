@@ -2,7 +2,7 @@
 
 Le jeu du pendu est un jeu de mots classique dans lequel le joueur tente de deviner le mot en devinant les lettres qui le composent.
 
-![Hangman Logo](Hangman/image/jeu_du_pendu.jpg)
+![Hangman Logo]([Hangman/image/jeu_du_pendu.jpg](https://github.com/MahamoudAH/pythonProjects/blob/master/Hangman/image/jeu_du_pendu.jpg?raw=true))
 
 ## Caractéristiques
 
