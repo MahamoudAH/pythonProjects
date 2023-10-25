@@ -1,5 +1,7 @@
 # Caesar Cipher
 
+![Caesar_Cipher](./images/caesar_cipher.png](https://github.com/MahamoudAH/pythonProjects/blob/master/caesar-cipher/image/71SgSx51bbL._SL1120_.jpg?raw=true](https://github.com/MahamoudAH/pythonProjects/blob/master/caesar-cipher/image/71SgSx51bbL._SL1120_.jpg?raw=true)))
+
 Le chiffrement de César est une technique de chiffrement simple et largement connue. C'est un type de chiffrement par substitution dans lequel chaque lettre du texte en clair est remplacée par une lettre située à un nombre fixe de positions plus loin dans l'alphabet.
 
 ## Fonctionnalités
