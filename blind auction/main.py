@@ -1,4 +1,5 @@
 import os
+from art import logo
 
 
 def gather_bids():
@@ -49,6 +50,7 @@ def find_winner(auction):
     return winner_name, winner_bid
 
 
+print(logo)
 # Recueillir les offres des utilisateurs
 auction_data = gather_bids()
 
